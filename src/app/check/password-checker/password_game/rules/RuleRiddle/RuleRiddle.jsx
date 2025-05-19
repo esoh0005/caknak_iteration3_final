@@ -42,7 +42,7 @@ export default class RuleRiddle extends Rule{
 function Riddle({riddleNum, regenerate, correct}){
     const riddle = riddles[riddleNum][0];
     const answer = riddles[riddleNum][1];
-    const reloadsLeft = useRef(3);
+    const reloadsLeft = useRef(2);
     const [showHint, setShowHint] = useState(false);
 
     return (
