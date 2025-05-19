@@ -39,7 +39,7 @@ function Earthquake({pswd, setPswd, shakePasswordBox, correct}){
 
     // start Earthquake
     useEffect(()=>{
-        timerRef.current = setTimeout(shuffleCharacters, 3000); // Slower initial delay
+        timerRef.current = setTimeout(shuffleCharacters, 1000);
         shakePasswordBox(true);
         solvedOnce.current = false;
         return () => clearTimeout(timerRef.current);
@@ -51,7 +51,7 @@ function Earthquake({pswd, setPswd, shakePasswordBox, correct}){
             clearTimeout(timerRef.current);
             timerRef.current = setTimeout(
                 shuffleCharacters, 
-                replaceCount.current < 8 ? 3000 : 5000 // Slower rate
+                replaceCount.current < 8 ? 1000 : 2000 // Faster rate
             );
         }
     }, [pswd]);
