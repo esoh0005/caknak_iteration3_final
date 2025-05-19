@@ -49,9 +49,14 @@ export default class RuleQR extends Rule{
 function QRDisplay({imgSrc}){
 
     return (
-        <div style={{textAlign: "center", paddingTop: "15px"}}>
+        <div style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            paddingTop: "15px",
+            paddingBottom: "15px"
+        }}>
             {imgSrc===null?null:
-                
                 <img 
                     width="150" 
                     height="150" 
